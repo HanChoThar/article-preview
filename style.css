@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.main{
+  max-width: 480px;
+  background-color: white;
+  border-radius: 25px;
+  margin:0 2em;
+}
+
+.photo img{
+  content: url('images/drawers.jpg');
+  max-width: 100%;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.text{
+  padding: 2rem;
+}
+
+.text_heading h2{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.text_heading p{
+  color: hsl(212, 23%, 69%);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.text_profile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text_profile img{
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.tooltip{
+  background-color: hsl(212, 23%, 69%);
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@media (min-width: 900px){
+  .main{
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: 300px 1fr;
+  }
+
+  .text{
+    padding: 4rem;
+  }
+
+  .photo img{
+    content: url('images/drawers.jpg');
+    border-radius:25px 0 0 25px;
+  }
+
+  .profile_text{
+    margin-right: 40% !important;
+  }
+}
